@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.amap.map3d.demo"
+        minSdkVersion 8
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/AMap_3DMap_V2.4.1.jar')
+    compile files('libs/AMap_Services_V2.4.0.jar')
+    compile files('libs/Android_Location_V1.3.2.jar')
+//    compile fileTree(include: '*.jar', dir: 'libs')
+//    compile project(':PullToRefresh')
+}
