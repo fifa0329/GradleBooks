@@ -1,0 +1,100 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    flavorDimensions "suit", "number"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 21
+    }
+
+    productFlavors {
+
+        //number flavours
+        ace {
+            flavorDimension "number"
+        }
+
+        two {
+            flavorDimension "number"
+        }
+
+        three {
+            flavorDimension "number"
+        }
+
+        four {
+            flavorDimension "number"
+        }
+
+        five {
+            flavorDimension "number"
+        }
+
+        six {
+            flavorDimension "number"
+        }
+
+        seven {
+            flavorDimension "number"
+        }
+
+        eight {
+            flavorDimension "number"
+        }
+
+        nine {
+            flavorDimension "number"
+        }
+
+        ten {
+            flavorDimension "number"
+        }
+
+        jack {
+            flavorDimension "number"
+        }
+
+        queen {
+            flavorDimension "number"
+        }
+
+        king {
+            flavorDimension "number"
+        }
+
+        clubs {
+            flavorDimension "suit"
+        }
+
+        spades {
+            flavorDimension "suit"
+        }
+
+        diamonds {
+            flavorDimension "suit"
+        }
+
+        hearts {
+            flavorDimension "suit"
+        }
+    }
+}
+
+dependencies {
+}
