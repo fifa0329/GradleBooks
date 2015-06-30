@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "me.ghui.gradledemo"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled false
+        }
+    }
+    productFlavors {
+        pay {
+            applicationId "me.ghui.gradledemo.pay"
+        }
+        free {}
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile 'com.jpardogo.googleprogressbar:library:+'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.jakewharton:butterknife:6.1.0'
+}
